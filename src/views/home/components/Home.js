@@ -98,9 +98,8 @@ function PricingContent() {
           Trustpay
         </Typography>
         <Typography variant="h5" align="center" color="text.secondary" component="p">
-        Transact Safely With Our Peer-to-Peer Escrow-Style Payment Platform. Trustpay 
-        is a secure transaction platform that completely protects 
-        you from being scammed when you want to buy or sell with someone you don't know.
+        Transact Safely With Our Peer-to-Peer Escrow-Style Payment Platform. Be protected from 
+        being scammed when you want to buy or sell.
         </Typography>
       </Container>
       {/* End hero unit */}

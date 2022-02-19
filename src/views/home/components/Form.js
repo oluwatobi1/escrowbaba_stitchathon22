@@ -4,18 +4,40 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import RadioGroup from '@mui/material/RadioGroup';
+import Radio from '@mui/material/Radio';
+
 
 export default function PaymentForm() {
   return (
     <React.Fragment>
-      <Typography variant="h6" gutterBottom>
-        Payment method
+      <Grid>
+      <FormControl>
+      <FormLabel id="demo-row-radio-buttons-group-label">I'm a</FormLabel>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+      >
+        <FormControlLabel value="Buyer" control={<Radio />} label="Buyer" />
+        <FormControlLabel value="Seller" control={<Radio />} label="Seller" />
+      </RadioGroup>
+      </FormControl>
+      </Grid>
+      
+      <Grid container spacing = {3}>
+      <Typography variant="h7" gutterBottom>
+        Type of Transaction
       </Typography>
+      </Grid>
+
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <TextField
             required
-            id="cardName"
+            id=" "
             label="Name on card"
             fullWidth
             autoComplete="cc-name"
