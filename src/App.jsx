@@ -1,10 +1,25 @@
-import withContext from './views/hoc/withContext';
+import React, { Component } from "react";
 import AllRoutes from './views/routes';
 
-const App = () => {
-  return (
-    <AllRoutes/>
-  )
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: "Helen",
+      cart: {},
+      products: [],
+      showMenu: true
+    };
+    this.routerRef = React.createRef();  }
+
+
+  render() {
+    return (
+  
+        <AllRoutes />
+
+    )
+  }
 }
 
-export default withContext(App);
