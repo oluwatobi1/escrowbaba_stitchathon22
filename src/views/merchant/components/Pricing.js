@@ -21,7 +21,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Trustpay
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -108,36 +108,13 @@ function PricingContent() {
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
           <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-            Company name
+            Trustpay
           </Typography>
-          <nav>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-            >
-              Features
-            </Link>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-            >
-              Enterprise
-            </Link>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-            >
-              Support
-            </Link>
-          </nav>
           <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login
+          </Button>
+          <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+            Sign up
           </Button>
         </Toolbar>
       </AppBar>
@@ -150,12 +127,12 @@ function PricingContent() {
           color="text.primary"
           gutterBottom
         >
-          Pricing
+          Trustpay
         </Typography>
         <Typography variant="h5" align="center" color="text.secondary" component="p">
-          Quickly build an effective pricing table for your potential customers with
-          this layout. It&apos;s built with default MUI components with little
-          customization.
+        Transact Safely With Our Peer-to-Peer Escrow-Style Payment Platform. Trustpay 
+        is a secure transaction platform that completely protects 
+        you from being scammed when you want to buy or sell with someone you don't know.
         </Typography>
       </Container>
       {/* End hero unit */}
