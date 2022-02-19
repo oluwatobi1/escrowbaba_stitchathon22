@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
 
 import Merchant from '../merchant/index';
 import Profile from '../profile/index';
-import Context from "../hoc/Context";
+import Home from "../home/index";
 
 const AllRoutes = () => {
 
@@ -11,9 +11,9 @@ const AllRoutes = () => {
 
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Merchant />} />
+            <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
-            <Route index element={<Merchant />} />
+            <Route path="/merchant"  element={<Merchant />} />
           </Routes>
         </BrowserRouter>
 

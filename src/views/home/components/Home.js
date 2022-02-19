@@ -14,12 +14,6 @@ import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
 
-
-// image imports
-
-import IphoneXImage from '../../asset/iphone-x.png'
-import { Stack } from '@mui/material';
-
 function Copyright(props) {
   return (
 
@@ -38,81 +32,66 @@ function Copyright(props) {
 
 const tiers = [
   {
-    title: 'Duplex Lekki',
-    price: '10,000',
-    image: IphoneXImage,
+    title: 'Free',
+    price: '0',
     description: [
       '10 users included',
       '2 GB of storage',
       'Help center access',
       'Email support',
     ],
-    buttonText: 'Buy',
+    buttonText: 'Sign up for free',
+    buttonVariant: 'outlined',
+  },
+  {
+    title: 'Pro',
+    subheader: 'Most popular',
+    price: '15',
+    description: [
+      '20 users included',
+      '10 GB of storage',
+      'Help center access',
+      'Priority email support',
+    ],
+    buttonText: 'Get started',
     buttonVariant: 'contained',
   },
   {
-    title: 'Duplex Lekki',
-    price: '10,000',
-    image: IphoneXImage,
+    title: 'Enterprise',
+    price: '30',
     description: [
-      '10 users included',
-      '2 GB of storage',
+      '50 users included',
+      '30 GB of storage',
       'Help center access',
-      'Email support',
+      'Phone & email support',
     ],
-    buttonText: 'Buy',
-    buttonVariant: 'contained',
+    buttonText: 'Contact us',
+    buttonVariant: 'outlined',
+  },
+];
+
+const footers = [
+  {
+    title: 'Company',
+    description: ['Team', 'History', 'Contact us', 'Locations'],
   },
   {
-    title: 'Duplex Lekki',
-    price: '10,000',
-    image: IphoneXImage,
+    title: 'Features',
     description: [
-      '10 users included',
-      '2 GB of storage',
-      'Help center access',
-      'Email support',
+      'Cool stuff',
+      'Random feature',
+      'Team feature',
+      'Developer stuff',
+      'Another one',
     ],
-    buttonText: 'Buy',
-    buttonVariant: 'contained',
   },
   {
-    title: 'Duplex Lekki',
-    price: '10,000',
-    image: IphoneXImage,
-    description: [
-      '10 users included',
-      '2 GB of storage',
-      'Help center access',
-      'Email support',
-    ],
-    buttonText: 'Buy',
-    buttonVariant: 'contained',
+    title: 'Resources',
+    description: ['Resource', 'Resource name', 'Another resource', 'Final resource'],
   },
   {
-    title: 'Duplex Lekki',
-    price: '10,000',
-    image: IphoneXImage,
-    description: [
-      '10 users included',
-      '2 GB of storage',
-      'Help center access',
-      'Email support',
-    ],
-    buttonText: 'Buy',
-    buttonVariant: 'contained',
-  }, {
-    title: 'Duplex Lekki',
-    price: '10,000',
-    image: IphoneXImage,
-    description: [
-      '10 users included',
-      '2 GB of storage',
-      'Help center access',
-      'Email support',
-    ],
-    buttonText: 'Buy',
-    buttonVariant: 'contained',
+    title: 'Legal',
+    description: ['Privacy policy', 'Terms of use'],
   },
 ];
 
@@ -121,6 +100,24 @@ function PricingContent() {
     <React.Fragment>
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
       <CssBaseline />
+      <AppBar
+        position="static"
+        color="default"
+        elevation={0}
+        sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+      >
+        <Toolbar sx={{ flexWrap: 'wrap' }}>
+          <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
+            Trustpay
+          </Typography>
+          <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+            Login
+          </Button>
+          <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+            Sign up
+          </Button>
+        </Toolbar>
+      </AppBar>
       {/* Hero unit */}
       <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
         <Typography
@@ -130,7 +127,12 @@ function PricingContent() {
           color="text.primary"
           gutterBottom
         >
-          Market Demo
+          Trustpay
+        </Typography>
+        <Typography variant="h5" align="center" color="text.secondary" component="p">
+        Transact Safely With Our Peer-to-Peer Escrow-Style Payment Platform. Trustpay 
+        is a secure transaction platform that completely protects 
+        you from being scammed when you want to buy or sell with someone you don't know.
         </Typography>
       </Container>
       {/* End hero unit */}
@@ -170,22 +172,12 @@ function PricingContent() {
                       mb: 2,
                     }}
                   >
-                    <Stack direction='column' spacing={2}>
-
-                    <Grid container>
-                      <img src={tier.image} alt="opps" style={{ width: '100%', height: '20vh' }}  />
-                    </Grid>
-
-                    <Stack direction='row' alignItems='center'>
                     <Typography component="h2" variant="h3" color="text.primary">
-                      N{tier.price}
+                      ${tier.price}
                     </Typography>
                     <Typography variant="h6" color="text.secondary">
                       /mo
                     </Typography>
-                    </Stack>
-                    </Stack>
-
                   </Box>
                   <ul>
                     {tier.description.map((line) => (
@@ -201,7 +193,7 @@ function PricingContent() {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant}  color="success">
+                  <Button fullWidth variant={tier.buttonVariant}>
                     {tier.buttonText}
                   </Button>
                 </CardActions>
@@ -220,6 +212,24 @@ function PricingContent() {
           py: [3, 6],
         }}
       >
+        <Grid container spacing={4} justifyContent="space-evenly">
+          {footers.map((footer) => (
+            <Grid item xs={6} sm={3} key={footer.title}>
+              <Typography variant="h6" color="text.primary" gutterBottom>
+                {footer.title}
+              </Typography>
+              <ul>
+                {footer.description.map((item) => (
+                  <li key={item}>
+                    <Link href="#" variant="subtitle1" color="text.secondary">
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </Grid>
+          ))}
+        </Grid>
         <Copyright sx={{ mt: 5 }} />
       </Container>
       {/* End footer */}
@@ -227,6 +237,6 @@ function PricingContent() {
   );
 }
 
-export default function Pricing() {
+export default function Home() {
   return <PricingContent />;
 }

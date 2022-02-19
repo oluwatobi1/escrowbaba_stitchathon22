@@ -5,9 +5,7 @@ import Pricing from './components/Pricing';
 const Merchant = () => {
   return (
     <>
-    <NavBar/>
     <Pricing/>
-    <div> hello Merchant</div>
     </>
   )
 }
