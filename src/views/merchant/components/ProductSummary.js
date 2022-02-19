@@ -6,10 +6,10 @@ import { Button } from '@mui/material';
 
 const addresses = ['1 MUI Drive', 'Reactville', 'Anytown', '99999', 'USA'];
 const payments = [
-  { name: 'Card type', detail: 'Visa' },
-  { name: 'Card holder', detail: 'Mr John Smith' },
-  { name: 'Card number', detail: 'xxxx-xxxx-xxxx-1234' },
-  { name: 'Expiry date', detail: '04/2024' },
+  { name: 'Vendor Name', detail: 'Helen Store (Jumia)' },
+  { name: 'Customer Name', detail: 'Mr John Smith' },
+  { name: 'Type', detail: 'Stitch Method' },
+  { name: 'Escrow Release date', detail: '04/2024' },
 ];
 
 export default function ProductSummary() {
@@ -20,14 +20,14 @@ export default function ProductSummary() {
         Order summary
       </Typography>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={5}>
           <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
             Shipping
           </Typography>
           <Typography gutterBottom>John Smith</Typography>
           <Typography gutterBottom>{addresses.join(', ')}</Typography>
         </Grid>
-        <Grid item container direction="column" xs={12} sm={6}>
+        <Grid item container direction="column" xs={12} sm={7}>
           <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
             Payment details
           </Typography>
@@ -45,7 +45,8 @@ export default function ProductSummary() {
           </Grid>
         </Grid>
       </Grid>
-      <Button variant="contained" size="large" color="success">Buy</Button>
+      <Button variant="contained"
+      href="/merchant/success" size="large" color="success">Pay  with Stitch</Button>
       </Grid>
     </React.Fragment>
   );
