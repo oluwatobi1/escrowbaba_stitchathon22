@@ -1,11 +1,6 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,7 +8,6 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
-import Form from "./Form"
 
 function Copyright(props) {
   return (
@@ -27,37 +21,11 @@ function Copyright(props) {
       {new Date().getFullYear()}
       {'.'}
     </Typography>
-    
+
   );
 }
 
-const tiers = [
-];
 
-const footers = [
-  {
-    title: 'Company',
-    description: ['Team', 'History', 'Contact us', 'Locations'],
-  },
-  {
-    title: 'Features',
-    description: [
-      'Cool stuff',
-      'Random feature',
-      'Team feature',
-      'Developer stuff',
-      'Another one',
-    ],
-  },
-  {
-    title: 'Resources',
-    description: ['Resource', 'Resource name', 'Another resource', 'Final resource'],
-  },
-  {
-    title: 'Legal',
-    description: ['Privacy policy', 'Terms of use'],
-  },
-];
 
 function PricingContent() {
   return (
@@ -72,13 +40,10 @@ function PricingContent() {
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
           <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-            Trustpay
+            EscrowBaba
           </Typography>
-          <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
-            Login
-          </Button>
-          <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
-            Sign up
+          <Button href="/merchant" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+            Merchant
           </Button>
         </Toolbar>
       </AppBar>
@@ -91,90 +56,32 @@ function PricingContent() {
           color="text.primary"
           gutterBottom
         >
-          Trustpay
+          Escrow Baba
         </Typography>
         <Typography variant="h5" align="center" color="text.secondary" component="p">
-        Transact Safely With Our Peer-to-Peer Escrow-Style Payment Platform. Be protected from 
-        being scammed when you want to buy or sell.
+        We make trust-less ecommerce transactions possible
         </Typography>
       </Container>
       {/* End hero unit */}
       <Container maxWidth="md" component="main">
         <Grid container spacing={5} alignItems="flex-end">
-          {tiers.map((tier) => (
-            // Enterprise card is full width at sm breakpoint
-            <Grid
-              item
-              key={tier.title}
-              xs={12}
-              sm={tier.title === 'Enterprise' ? 12 : 6}
-              md={4}
-            >
-              <Card>
-                <CardHeader
-                  title={tier.title}
-                  subheader={tier.subheader}
-                  titleTypographyProps={{ align: 'center' }}
-                  action={tier.title === 'Pro' ? <p></p> : null}
-                  subheaderTypographyProps={{
-                    align: 'center',
-                  }}
-                  sx={{
-                    backgroundColor: (theme) =>
-                      theme.palette.mode === 'light'
-                        ? theme.palette.grey[200]
-                        : theme.palette.grey[700],
-                  }}
-                />
-                <CardContent>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'baseline',
-                      mb: 2,
-                    }}
-                  >
-                    <Typography component="h2" variant="h3" color="text.primary">
-                      ${tier.price}
-                    </Typography>
-                    <Typography variant="h6" color="text.secondary">
-                      /mo
-                    </Typography>
-                  </Box>
-                  <ul>
-                    {tier.description.map((line) => (
-                      <Typography
-                        component="li"
-                        variant="subtitle1"
-                        align="center"
-                        key={line}
-                      >
-                        {line}
-                      </Typography>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant}>
-                    {tier.buttonText}
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
         </Grid>
       </Container>
-<Grid container alignItems="center"
-justifyContent="center">
-  <Grid item
-  sx={{  width:"50vw"}}
-  >
-<Form/>
+      <Grid container alignItems="center"
+        justifyContent="center">
+        <Grid item  >
 
-  </Grid>
+          <Button
+            href="/merchant"
+            size='large'
+            color="success"
+            variant="contained" sx={{ my: 1, mx: 1.5 }}>
+            Buy From Merchant
+          </Button>
 
-</Grid>
+        </Grid>
+
+      </Grid>
 
 
 
@@ -189,25 +96,7 @@ justifyContent="center">
           py: [3, 6],
         }}
       >
-        <Grid container spacing={4} justifyContent="space-evenly">
-          {footers.map((footer) => (
-            <Grid item xs={6} sm={3} key={footer.title}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
-                {footer.title}
-              </Typography>
-              <ul>
-                {footer.description.map((item) => (
-                  <li key={item}>
-                    <Link href="#" variant="subtitle1" color="text.secondary">
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </Grid>
-          ))}
-        </Grid>
-        <Copyright sx={{ mt: 5 }} />
+        <Copyright />
       </Container>
       {/* End footer */}
     </React.Fragment>
