@@ -1,4 +1,4 @@
-
+import withContext from './views/hoc/withContext';
 import AllRoutes from './views/routes';
 
 const App = () => {
@@ -7,4 +7,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default withContext(App);
