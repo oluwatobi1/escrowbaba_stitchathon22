@@ -197,7 +197,7 @@ function PricingContent() {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant}  color="success">
+                  <Button fullWidth  href="/merchant/buy" variant={tier.buttonVariant}  color="success">
                     {tier.buttonText}
                   </Button>
                 </CardActions>
