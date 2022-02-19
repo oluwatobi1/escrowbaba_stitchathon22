@@ -1,6 +1,5 @@
 const config = {
-    basename: '/admin',
-    defaultPath: '/dashboard',
+    merchant: '/merchant',
     fontFamily: `'Roboto', sans-serif`,
     borderRadius: 4
 };
