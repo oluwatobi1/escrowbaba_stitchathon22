@@ -18,6 +18,11 @@ import Container from '@mui/material/Container';
 // image imports
 
 import IphoneXImage from '../../asset/iphone-x.png'
+import Headset from '../../asset/headset.jpg'
+import Drone from '../../asset/drone.jpg'
+import SamsungPhone from '../../asset/samsung.jpg'
+import SmartTV from '../../asset/Smart TV.jpg'
+import wristwatch from '../../asset/wristwatch.jpg'
 import { Stack } from '@mui/material';
 
 function Copyright(props) {
@@ -38,78 +43,72 @@ function Copyright(props) {
 
 const tiers = [
   {
-    title: 'Duplex Lekki',
-    price: '10,000',
+    title: 'iPhone X',
+    price: ' 249,000',
     image: IphoneXImage,
     description: [
-      '10 users included',
-      '2 GB of storage',
-      'Help center access',
+      '256gb Space Grey',
+      'Free pouch',
+      'Tempered gray glass',
+    ],
+    buttonText: 'Buy',
+    buttonVariant: 'contained',
+  },
+  {
+    title: 'Gaming Headset',
+    price: ' 45,000',
+    image: Headset,
+    description: [
+      'Noise cancellation',
+      'High bass',
       'Email support',
     ],
     buttonText: 'Buy',
     buttonVariant: 'contained',
   },
   {
-    title: 'Duplex Lekki',
-    price: '10,000',
-    image: IphoneXImage,
+    title: 'Drone',
+    price: ' 300,000',
+    image: Drone,
     description: [
-      '10 users included',
+      'Emotion pocket selfie',
       '2 GB of storage',
-      'Help center access',
-      'Email support',
+      'Drone Quadcopter',
     ],
     buttonText: 'Buy',
     buttonVariant: 'contained',
   },
   {
-    title: 'Duplex Lekki',
-    price: '10,000',
-    image: IphoneXImage,
+    title: 'Samsung phone',
+    price: ' 159,000',
+    image: SamsungPhone,
     description: [
-      '10 users included',
-      '2 GB of storage',
-      'Help center access',
-      'Email support',
+      '100 GB of storage',
+      'Face detection feature',
+      '2 years warranty',
     ],
     buttonText: 'Buy',
     buttonVariant: 'contained',
   },
   {
-    title: 'Duplex Lekki',
-    price: '10,000',
-    image: IphoneXImage,
+    title: 'Curvy Smart TV',
+    price: '1,500,000',
+    image: SmartTV,
     description: [
       '10 users included',
-      '2 GB of storage',
-      'Help center access',
-      'Email support',
-    ],
-    buttonText: 'Buy',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'Duplex Lekki',
-    price: '10,000',
-    image: IphoneXImage,
-    description: [
-      '10 users included',
-      '2 GB of storage',
-      'Help center access',
-      'Email support',
+      '200 GB of storage',
+      '5 years warranty',
     ],
     buttonText: 'Buy',
     buttonVariant: 'contained',
   }, {
-    title: 'Duplex Lekki',
-    price: '10,000',
-    image: IphoneXImage,
+    title: 'Wrist watch',
+    price: '19,000',
+    image: wristwatch,
     description: [
-      '10 users included',
-      '2 GB of storage',
+      'Luxury',
+      'Gold chain',
       'Help center access',
-      'Email support',
     ],
     buttonText: 'Buy',
     buttonVariant: 'contained',
@@ -173,15 +172,14 @@ function PricingContent() {
                     <Stack direction='column' spacing={2}>
 
                     <Grid container>
-                      <img src={tier.image} alt="opps" style={{ width: '100%', height: '20vh' }}  />
+                      <img src={tier.image} alt="opps" style={{ width: '100%', height: '30vh' }}  />
                     </Grid>
 
                     <Stack direction='row' alignItems='center'>
                     <Typography component="h2" variant="h3" color="text.primary">
-                      N{tier.price}
+                    ₦{tier.price}
                     </Typography>
                     <Typography variant="h6" color="text.secondary">
-                      /mo
                     </Typography>
                     </Stack>
                     </Stack>
